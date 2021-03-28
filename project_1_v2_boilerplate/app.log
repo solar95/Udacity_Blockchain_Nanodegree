@@ -1,0 +1,65 @@
+Secp256k1 bindings are not compiled. Pure JS implementation will be used.
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "x-powered-by" to true
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "etag" to 'weak'
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "etag fn" to [Function: generateETag]
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "env" to 'development'
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "query parser" to 'extended'
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "query parser fn" to [Function: parseExtendedQueryString]
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "subdomain offset" to 2
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "trust proxy" to false
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "trust proxy fn" to [Function: trustNone]
+Tue, 23 Mar 2021 06:56:09 GMT express:application booting in development mode
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "view" to [Function: View]
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "views" to 'C:\\Users\\Bertin\\Downloads\\project-1-v2-boilerplate\\project_1_v2_boilerplate\\views'
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "jsonp callback name" to 'callback'
+Tue, 23 Mar 2021 06:56:09 GMT express:application set "port" to 8000
+Tue, 23 Mar 2021 06:56:09 GMT express:router use '/' query
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router use '/' expressInit
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router use '/' logger
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router use '/' urlencodedParser
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router use '/' jsonParser
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/block/height/:height'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/block/height/:height'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route get '/block/height/:height'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/requestValidation'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/requestValidation'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route post '/requestValidation'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/submitstar'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/submitstar'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route post '/submitstar'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/block/hash/:hash'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/block/hash/:hash'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route get '/block/hash/:hash'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/blocks/:address'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/blocks/:address'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route get '/blocks/:address'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/url'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/url'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route get '/url'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route new '/add'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/add'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:route get '/add'
+Tue, 23 Mar 2021 06:56:09 GMT express:router:layer new '/'
+(node:16784) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server Listening for port: 8000
+Tue, 23 Mar 2021 06:56:43 GMT express:router dispatching GET /add
+Tue, 23 Mar 2021 06:56:43 GMT express:router query  : /add
+Tue, 23 Mar 2021 06:56:43 GMT express:router expressInit  : /add
+Tue, 23 Mar 2021 06:56:43 GMT express:router logger  : /add
+Tue, 23 Mar 2021 06:56:43 GMT express:router urlencodedParser  : /add
+Tue, 23 Mar 2021 06:56:43 GMT express:router jsonParser  : /add
+Anadido
+[0mGET /add [32m200 [0m2.403 ms - 15[0m
+^C
