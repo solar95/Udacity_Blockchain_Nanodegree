@@ -132,7 +132,7 @@ class Blockchain {
             let messageTime = parseInt(message.split(':')[1])
             let currentTime = parseInt(new Date().getTime().toString().slice(0, -3));
 
-            if (currentTime < (messageTime + (5 * 60 * 1000))) {
+            if (currentTime < (messageTime + (5 * 60))) {
 
                 let lessThanFiveMinutes = bitcoinMessage.verify(message, address, signature);
                 
