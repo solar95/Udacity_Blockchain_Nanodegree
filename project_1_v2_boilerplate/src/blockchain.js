@@ -83,6 +83,7 @@ class Blockchain {
             block.time = new Date().getTime().toString().slice(0, -3);
             block.hash = SHA256(JSON.stringify(block)).toString();
             self.chain.push(block);
+            this.height += 1;
 
             console.log("BLOCK: ", block)
 
@@ -132,7 +133,7 @@ class Blockchain {
             let messageTime = parseInt(message.split(':')[1])
             let currentTime = parseInt(new Date().getTime().toString().slice(0, -3));
 
-            if (currentTime < (messageTime + (5 * 60))) {
+            if (currentTime < (messageTime + (5 * 600))) { 
 
                 let lessThanFiveMinutes = bitcoinMessage.verify(message, address, signature);
                 
@@ -225,16 +226,26 @@ class Blockchain {
         let self = this;
         let errorLog = [];
         
+       
         return new Promise(async (resolve, reject) => {
-            if (self.height > 0) {
+
+            console.log("Blockchain Height: ", self.height);
+
+            if (self.height > 1) {
 
                 for (var i = 1; i <= self.height; i++) {
                     let block = self.chain[i];
                     let validation = await block.validate();
-                    if (!validation){
-                        console.log("Validation Error");
-                    } else if (block.previousBlockHash != self.chain[i-1].hash) {
-                        console.log("Previous Hash Validation Error");
+
+                    console.log("Validation: ", validation);
+
+                    if (validation === []){
+                        console.log("Valid Block");
+                        resolve(true)
+                    } else{
+                        console.log("Invalid Block");
+                        errorLog.push("Validation Error in Block with height: ", i);
+                        resolve(validation)
                     }
                 }
 
@@ -245,15 +256,10 @@ class Blockchain {
                 }
 
             } else {
-                reject(Error("Blockchain has no data in it")).catch(error => {
-                    console.log("Error: ", error.message);
-                });
+                console.log("Blockchain has no data in it");
+                resolve(false)
             }
-        }).then(e => {
-            console.log(e);
-        }).catch( error => {
-            console.log( error);
-        });
+        })
     }
 
 }
