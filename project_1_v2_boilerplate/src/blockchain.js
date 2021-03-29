@@ -84,10 +84,16 @@ class Blockchain {
             block.hash = SHA256(JSON.stringify(block)).toString();
             self.chain.push(block);
             this.height += 1;
+            let validChain = self.chain.validateChain();
 
             console.log("BLOCK: ", block)
 
-            resolve(block);
+            if(validChain){
+                resolve(block);
+            }else{
+                reject("Blockchain no longer valid!")
+            }
+
         });
     }
 
@@ -133,7 +139,7 @@ class Blockchain {
             let messageTime = parseInt(message.split(':')[1])
             let currentTime = parseInt(new Date().getTime().toString().slice(0, -3));
 
-            if (currentTime < (messageTime + (5 * 600))) { 
+            if (currentTime < (messageTime + (5 * 60))) { 
 
                 let lessThanFiveMinutes = bitcoinMessage.verify(message, address, signature);
                 
